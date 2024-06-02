@@ -2,17 +2,25 @@ body{
     display: flexbox;
     justify-content: center;
   align-items: center;
-  background-color: rgb(27, 27, 27);
+
+  background-color: rgb(71, 71, 71);
 }
 .fullSection{
+    overflow: hidden; /* Prevent text overflow */
+    white-space: nowrap; /* Prevent text wrapping */
+    /* text-overflow: ellipsis; */
+    /* width: auto; */
     text-align: center;
     vertical-align: bottom;
-    background-color: brown;
-    display: grid;
+    /* background-color: brown; */
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    /* max-width: 440px; */
+    flex-direction: column;
     border-radius: 5%;
     padding: 20px;
-    overflow: hidden;
-  white-space: nowrap;
+    /* overflow: hidden;
+    flex-wrap: nowrap; */
 }
 button{
     font-size: 40px;
@@ -23,12 +31,14 @@ button{
     border-radius: 10px;
 }
 .clear{
-    width: 195px;
+    width: 90px;
     margin: 5px;
     font-size: 45px;
 }
 .result{
-    text-overflow: hidden;
+    overflow: hidden; /* Prevent text overflow */
+    white-space: nowrap; /* Prevent text wrapping */
+    text-overflow: ellipsis;
     display: flex;
     flex-direction: column;
     text-align: right;
@@ -39,6 +49,8 @@ button{
     justify-content: center;
     margin-bottom: 10px;
     border-radius: 10px;
+    /* overflow: hidden;
+    flex-wrap: nowrap; */
 }
 
 .contain{
@@ -48,7 +60,8 @@ button{
     flex-direction: column;
     height: 93vh;
     /* overflow: hidden;
-    white-space: nowrap; */
+    flex-wrap: nowrap; */
+    
 }
 .oper{
     background-color: rgb(225, 196, 124);
