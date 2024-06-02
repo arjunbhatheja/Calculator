@@ -20,7 +20,7 @@ function operate(a, b, oper){
     else if(oper == "-"){
         return subtract(a, b);
     }
-    else if(oper == "╳"){
+    else if(oper == "×"){
         return multiply(a, b);
     }   
     else if(oper == "/"){
@@ -30,7 +30,8 @@ function operate(a, b, oper){
 let display = document.querySelector(".contain");
 
 let buttons = document.querySelectorAll("button");
-let result = document.querySelector(".result");
+let runsum = document.querySelector("#RunSum");
+let result = document.querySelector("#res");
 // buttons.forEach(button => button.addEventListener("mousedown", function(){
 //     button.style.transform = 'scale(0.9)';
 //     button.style.transition = '0.2s';
@@ -43,18 +44,39 @@ let result = document.querySelector(".result");
 // }))
 buttons.forEach(button => button.addEventListener("click", function(){
     if(button.classList.contains("num")){
-        result.textContent += button.textContent;
+        result.textContent+= button.textContent;
+        if(fNum!= undefined){
+            const match = result.textContent.match(/\d+$/);
+            if (match) {
+                sNum = parseFloat(match[0]);
+                runsum.textContent = operate(fNum, sNum, oper);
+            }
+        }
+        else{
+            runsum.textContent = result.textContent;
+        }
     }
     else if(button.classList.contains("oper")){
-        fNum = parseFloat(display.textContent);
+        // if(fNum!= undefined && sNum!=undefined){
+        //     result.textContent = operate(fNum, sNum, oper);
+        // }const match = display.textContent.match(/\d+$/);
+        const match = result.textContent.match(/\d+$/);
+    if (match) {
+        fNum = parseFloat(runsum.textContent);
+        console.log(fNum);
         oper = button.textContent;
-        result.textContent = "";
+        result.textContent += oper;
+    }
     }
     else if(button.classList.contains("equal")){
-        sNum = parseFloat(display.textContent);
+        // sNum = parseFloat(display.textContent);
         result.textContent = operate(fNum, sNum, oper);
     }
     else if(button.classList.contains("clear")){
+        fNum = undefined;
+        sNum = undefined;
+        oper = undefined;
         result.textContent = "";
+        runsum.textContent = "";
     }
 }));

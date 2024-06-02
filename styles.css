@@ -2,6 +2,7 @@ body{
     display: flexbox;
     justify-content: center;
   align-items: center;
+  background-color: rgb(27, 27, 27);
 }
 .fullSection{
     text-align: center;
@@ -10,6 +11,8 @@ body{
     display: grid;
     border-radius: 5%;
     padding: 20px;
+    overflow: hidden;
+  white-space: nowrap;
 }
 button{
     font-size: 40px;
@@ -25,9 +28,9 @@ button{
     font-size: 45px;
 }
 .result{
+    text-overflow: hidden;
     display: flex;
     flex-direction: column;
-    /* display: inline; */
     text-align: right;
     padding-right: 8px;
     height: 80px;
@@ -44,6 +47,8 @@ button{
     justify-content: center;
     flex-direction: column;
     height: 93vh;
+    /* overflow: hidden;
+    white-space: nowrap; */
 }
 .oper{
     background-color: rgb(225, 196, 124);
