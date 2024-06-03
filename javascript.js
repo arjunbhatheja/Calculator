@@ -50,7 +50,6 @@ function operate(a, b, oper){
 
 document.addEventListener("keydown", function(event) {
     const key = event.key; 
-    console.log(key);
 
     if (key === "+") {
         const additionButton = document.querySelector(`.oper[data-key="${key}"]`);
