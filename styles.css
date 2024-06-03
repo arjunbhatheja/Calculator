@@ -10,7 +10,7 @@ body{
     color: rgb(216, 211, 211);
     text-align: center;
     margin-top: 20px;
-    margin-bottom:50px;
+    margin-bottom: 50px;
 }
 .fullSection{
     overflow: hidden; 
@@ -23,7 +23,7 @@ body{
     border-radius: 5%;
     padding: 20px;
     margin-top: 0px;
-    margin-bottom: 120px;
+    margin-bottom: 90px;
 }
 button{
     font-size: 40px;
@@ -38,6 +38,7 @@ button{
     width: 90px;
     margin: 5px;
     font-size: 45px;
+    background-color: rgb(197, 244, 217);
 }
 .result{
     overflow: hidden; 
@@ -67,9 +68,6 @@ button{
 }
 .equal{
     background-color: rgb(245, 212, 212);
-}
-.clear{
-    background-color: rgb(197, 244, 217);
 }
 
 .anim{
